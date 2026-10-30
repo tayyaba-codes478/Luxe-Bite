@@ -1,0 +1,520 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10100f">
+  <meta name="description" content="LuxeBite — an unforgettable fine dining experience. Discover signature dishes, explore our menu and reserve your table.">
+
+  <title>LuxeBite | Fine Dining Experience</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="header" id="home">
+    <nav class="navbar container">
+      <a href="#home" class="logo">
+        Luxe<span>Bite</span><span class="logo-dot">.</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation" aria-expanded="false"
+        aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">Our Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="cart-button" id="cartButton"
+          aria-label="View shopping cart">
+          <span class="cart-icon">🛍</span>
+          <span>Cart</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <a href="#reservation" class="btn btn-small">
+          Book a Table
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content container">
+        <span class="eyebrow">
+          <span class="eyebrow-line"></span>
+          WELCOME TO LUXEBITE
+        </span>
+
+        <h1>
+          An Artful Taste.<br>
+          <span>Unforgettable</span> Moments.
+        </h1>
+
+        <p>
+          Where extraordinary flavors meet timeless elegance.
+          Discover a dining experience crafted to delight every sense.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#menu" class="btn">
+            Explore Our Menu <span>↗</span>
+          </a>
+
+          <a href="#about" class="btn btn-outline">
+            Discover Our Story
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <strong>12+</strong>
+            <span>Years of Excellence</span>
+          </div>
+
+          <div class="stat-divider"></div>
+
+          <div>
+            <strong>30+</strong>
+            <span>Signature Dishes</span>
+          </div>
+
+          <div class="stat-divider"></div>
+
+          <div>
+            <strong>4.9<span class="star">★</span></strong>
+            <span>Guest Rating</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator">
+        <span class="scroll-line"></span>
+        SCROLL TO EXPLORE
+      </a>
+    </section>
+
+    <!-- Brand Intro -->
+    <section class="intro section-padding" id="about">
+      <div class="container intro-grid">
+        <div class="intro-image image-frame">
+          <img
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85"
+            alt="Elegant fine dining restaurant table"
+            loading="lazy"
+          >
+          <div class="image-badge">
+            <span>THE ART OF</span>
+            <strong>Fine Dining</strong>
+          </div>
+        </div>
+
+        <div class="intro-content">
+          <span class="eyebrow">OUR PHILOSOPHY</span>
+
+          <h2>Good food.<br><span>Beautifully</span> remembered.</h2>
+
+          <p>
+            At LuxeBite, every dish tells a story. We bring together
+            carefully selected ingredients, thoughtful preparation
+            and an atmosphere designed for unforgettable moments.
+          </p>
+
+          <p>
+            From intimate dinners to special celebrations, we believe
+            the finest experiences are found in every little detail.
+          </p>
+
+          <a href="#reservation" class="text-link">
+            Experience LuxeBite <span>↗</span>
+          </a>
+
+          <div class="signature">
+            <span class="signature-mark">L.</span>
+            <div>
+              <strong>The LuxeBite Team</strong>
+              <span>Made with passion, served with care.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section section-padding" id="menu">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">A TASTE OF LUXURY</span>
+            <h2>Our Signature <span>Menu</span></h2>
+          </div>
+
+          <p>
+            Thoughtfully prepared dishes, fresh ingredients
+            and flavors worth coming back for.
+          </p>
+        </div>
+
+        <div class="menu-filters" id="menuFilters">
+          <button class="filter-btn active" data-category="all">All Dishes</button>
+          <button class="filter-btn" data-category="starters">Starters</button>
+          <button class="filter-btn" data-category="mains">Main Course</button>
+          <button class="filter-btn" data-category="desserts">Desserts</button>
+          <button class="filter-btn" data-category="drinks">Drinks</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+
+          <!-- Menu cards are added by JavaScript -->
+
+        </div>
+
+        <p class="menu-note">
+          Our menu is a sample selection created for this website demo.
+        </p>
+      </div>
+    </section>
+
+    <!-- Special Offer -->
+    <section class="special-section">
+      <div class="container special-card">
+        <div class="special-content">
+          <span class="eyebrow">A LITTLE SOMETHING SPECIAL</span>
+
+          <h2>Make tonight<br><span>extraordinary.</span></h2>
+
+          <p>
+            Explore our chef's favorites and discover your next
+            unforgettable meal.
+          </p>
+
+          <a href="#menu" class="btn">
+            Discover the Menu <span>↗</span>
+          </a>
+        </div>
+
+        <div class="special-image">
+          <img
+            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85"
+            alt="Beautifully presented gourmet meal"
+            loading="lazy"
+          >
+          <span class="special-stamp">CHEF'S<br>SELECTION</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reservation-section section-padding" id="reservation">
+      <div class="container reservation-grid">
+
+        <div class="reservation-info">
+          <span class="eyebrow">YOUR TABLE AWAITS</span>
+
+          <h2>Make it a<br><span>memorable</span> evening.</h2>
+
+          <p>
+            Planning a special dinner or simply craving something
+            wonderful? Send us your preferred booking details.
+          </p>
+
+          <div class="reservation-detail">
+            <span class="detail-icon">◷</span>
+            <div>
+              <strong>Opening Hours</strong>
+              <span>Monday – Sunday</span>
+              <span>12:00 PM – 11:00 PM</span>
+            </div>
+          </div>
+
+          <div class="reservation-detail">
+            <span class="detail-icon">⌖</span>
+            <div>
+              <strong>Visit Us</strong>
+              <span>123 Culinary Avenue</span>
+              <span>Your City, Your Country</span>
+            </div>
+          </div>
+
+          <p class="demo-notice">
+            Demo website: the booking form does not create a real reservation.
+          </p>
+        </div>
+
+        <form class="reservation-form" id="reservationForm">
+          <div class="form-heading">
+            <span class="eyebrow">RESERVATION REQUEST</span>
+            <h3>Reserve Your Table</h3>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="guestName">Full Name</label>
+              <input
+                type="text"
+                id="guestName"
+                name="guestName"
+                placeholder="Your name"
+                autocomplete="name"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="guestEmail">Email Address</label>
+              <input
+                type="email"
+                id="guestEmail"
+                name="guestEmail"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookingDate">Date</label>
+              <input
+                type="date"
+                id="bookingDate"
+                name="bookingDate"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="bookingTime">Preferred Time</label>
+              <select id="bookingTime" name="bookingTime" required>
+                <option value="">Select a time</option>
+                <option>12:00 PM</option>
+                <option>1:00 PM</option>
+                <option>2:00 PM</option>
+                <option>5:00 PM</option>
+                <option>6:00 PM</option>
+                <option>7:00 PM</option>
+                <option>8:00 PM</option>
+                <option>9:00 PM</option>
+                <option>10:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="guestCount">Number of Guests</label>
+            <select id="guestCount" name="guestCount" required>
+              <option value="1">1 Guest</option>
+              <option value="2" selected>2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5">5 Guests</option>
+              <option value="6">6 Guests</option>
+              <option value="7">7 Guests</option>
+              <option value="8">8 Guests</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="bookingMessage">Special Requests (Optional)</label>
+            <textarea
+              id="bookingMessage"
+              name="bookingMessage"
+              rows="3"
+              placeholder="Any special occasion or request?"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-full">
+            Request a Reservation <span>↗</span>
+          </button>
+
+          <p class="form-message" id="formMessage" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews-section section-padding" id="reviews">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="eyebrow">KIND WORDS</span>
+          <h2>Experiences worth <span>sharing.</span></h2>
+          <p>Sample testimonials for this portfolio demonstration.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="review-stars" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+            <blockquote>
+              “An elegant atmosphere, thoughtful presentation and
+              a menu that makes choosing just one dish difficult.”
+            </blockquote>
+            <div class="review-author">
+              <span class="review-avatar">A</span>
+              <div>
+                <strong>Alex Morgan</strong>
+                <span>Sample Guest Review</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card featured-review">
+            <div class="review-stars" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+            <blockquote>
+              “A beautiful concept for a special evening.
+              The little details make the whole experience feel premium.”
+            </blockquote>
+            <div class="review-author">
+              <span class="review-avatar">S</span>
+              <div>
+                <strong>Sarah Williams</strong>
+                <span>Sample Guest Review</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+            <blockquote>
+              “From the first impression to the final dessert,
+              everything feels carefully considered and inviting.”
+            </blockquote>
+            <div class="review-author">
+              <span class="review-avatar">J</span>
+              <div>
+                <strong>James Parker</strong>
+                <span>Sample Guest Review</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-inner">
+        <span class="eyebrow">YOUR NEXT FAVORITE PLACE</span>
+        <h2>Good taste brings<br><span>us together.</span></h2>
+        <p>Explore the menu and imagine your next memorable evening.</p>
+
+        <div class="contact-buttons">
+          <a href="#menu" class="btn">Explore Menu <span>↗</span></a>
+          <a href="#reservation" class="btn btn-outline">Book a Table</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Cart Panel -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+
+  <aside class="cart-panel" id="cartPanel"
+    aria-label="Shopping cart" aria-hidden="true">
+
+    <div class="cart-header">
+      <div>
+        <span class="eyebrow">YOUR SELECTION</span>
+        <h3>Your Cart <span id="cartTitleCount">(0)</span></h3>
+      </div>
+
+      <button class="cart-close" id="cartClose"
+        aria-label="Close cart">✕</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Your cart is empty. Let's find something delicious!</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <strong id="cartTotal">Rs. 0</strong>
+      </div>
+
+      <button class="btn btn-full" id="checkoutButton">
+        Place Demo Order <span>↗</span>
+      </button>
+
+      <p class="cart-demo-note">
+        Demo only. No payment or real order will be processed.
+      </p>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          Luxe<span>Bite</span><span class="logo-dot">.</span>
+        </a>
+
+        <p>
+          An appreciation of fine food, thoughtful details
+          and moments worth remembering.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <a href="#about">Our Story</a>
+        <a href="#menu">Our Menu</a>
+        <a href="#reviews">Guest Reviews</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Visit</h4>
+        <a href="#reservation">Reservations</a>
+        <a href="#contact">Contact Us</a>
+        <span>Mon – Sun: 12 PM – 11 PM</span>
+      </div>
+
+      <div class="footer-column">
+        <h4>Follow Along</h4>
+        <a href="https://www.instagram.com/" target="_blank"
+          rel="noopener noreferrer">Instagram ↗</a>
+        <a href="https://www.facebook.com/" target="_blank"
+          rel="noopener noreferrer">Facebook ↗</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="currentYear"></span> LuxeBite. Portfolio demo project.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+</body>
+</html>
